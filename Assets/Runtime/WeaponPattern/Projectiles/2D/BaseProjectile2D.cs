@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using utilieties.controllers.stats;
+using utilities.controllers.stats;
 
 namespace utilities.Projectiles
 {

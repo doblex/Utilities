@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
-using utilieties.controllers.stats.Structs;
+using utilities.controllers.stats.Structs;
 
-namespace utilieties.controllers.stats
+namespace utilities.controllers.stats
 {
     public class HealthController : BaseStatController
     {

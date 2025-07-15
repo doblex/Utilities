@@ -1,4 +1,4 @@
-﻿namespace utilieties.controllers.stats.Structs
+﻿namespace utilities.controllers.stats.Structs
 {
 
     public struct StatData

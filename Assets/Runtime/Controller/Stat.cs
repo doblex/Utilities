@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace utilieties.controllers.stats
+namespace utilities.controllers.stats
 {
     [CreateAssetMenu(fileName = "Stat", menuName = "Stats")]
     public class Stat : ScriptableObject
