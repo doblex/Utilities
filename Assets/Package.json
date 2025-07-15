@@ -3,5 +3,15 @@
     "displayName": "Utilities",
     "version": "1.0.1",
     "description": "A Utility Package",
-    "unity": "6.0"
+    "unity": "6.0",
+    "dependencies": {
+        "com.unity.ai.navigation": "2.0.8"
+    },
+    "author": {
+        "name": "Matteo Golfetto"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com:doblex/Utilities.git"
+    }
 }
