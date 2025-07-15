@@ -1,0 +1,17 @@
+{
+    "name": "Weapon",
+    "rootNamespace": "utilities.weapons",
+    "references": [
+        "GUID:d869bc3f7c168264dbcf40ac01cbd23c",
+        "GUID:45eb008101b5f084c8983145907a1329"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
