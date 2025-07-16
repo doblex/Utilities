@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dialogue XML Builder</title>
+  <script>
+    function addChoice(container) {
+      const choiceDiv = document.createElement('div');
+      choiceDiv.innerHTML = `
+        Choice Text: <input type="text" class="choiceText"> 
+        Next ID: <input type="text" class="choiceNext"> 
+        <button onclick="this.parentElement.remove()">Remove</button>
+        <br>`;
+      container.appendChild(choiceDiv);
+    }
+
+    function generateXML() {
+      const xmlParts = ['<?xml version="1.0" encoding="UTF-8"?>'];
+      const dialogues = document.querySelectorAll('.dialogue');
+      dialogues.forEach(dialogue => {
+        const id = dialogue.querySelector('.dialogueId').value;
+        const character = dialogue.querySelector('.character').value;
+        const text = dialogue.querySelector('.text').value;
+        const highlights = text.replace(/\*(.*?)\*/g, '<highlight color="red">$1</highlight>');
+
+        xmlParts.push(`<dialogue id="${id}">`);
+        xmlParts.push(`  <line>`);
+        xmlParts.push(`    <character>${character}</character>`);
+        xmlParts.push(`    <text>${highlights}</text>`);
+
+        const choices = dialogue.querySelectorAll('.choiceText');
+        if (choices.length > 0) {
+          xmlParts.push(`    <choices>`);
+          choices.forEach((choice, i) => {
+            const text = choice.value;
+            const next = dialogue.querySelectorAll('.choiceNext')[i].value;
+            xmlParts.push(`      <choice text="${text}" next="${next}"/>`);
+          });
+          xmlParts.push(`    </choices>`);
+        } else {
+          const next = dialogue.querySelector('.next').value;
+          if (next) {
+            xmlParts.push(`    <next next="${next}"/>`);
+          }
+        }
+
+        xmlParts.push(`  </line>`);
+        xmlParts.push(`</dialogue>`);
+      });
+
+      const output = xmlParts.join('\n');
+      document.getElementById('output').textContent = output;
+
+      const blob = new Blob([output], { type: 'application/xml' });
+      const url = URL.createObjectURL(blob);
+      const link = document.getElementById('downloadLink');
+      link.href = url;
+      link.style.display = 'inline';
+    }
+
+    function addDialogue() {
+      const container = document.getElementById('dialogues');
+      const dialogueDiv = document.createElement('div');
+      dialogueDiv.className = 'dialogue';
+      dialogueDiv.innerHTML = `
+        <hr>
+        Dialogue ID: <input type="text" class="dialogueId"><br>
+        Character: <input type="text" class="character"><br>
+        Text (use *word* to highlight): <input type="text" class="text"><br>
+        Next Dialogue ID (leave blank if using choices): <input type="text" class="next"><br>
+        <div class="choicesContainer"></div>
+        <button onclick="addChoice(this.previousElementSibling)">Add Choice</button>
+        <br><br>`;
+      container.appendChild(dialogueDiv);
+    }
+  </script>
+</head>
+<body>
+  <h1>Dialogue XML Builder</h1>
+  <div id="dialogues"></div>
+  <button onclick="addDialogue()">Add Dialogue</button>
+  <button onclick="generateXML()">Generate XML</button>
+  <a id="downloadLink" download="dialogues.xml" style="display:none; margin-left: 10px;">Download XML</a>
+  <h2>Output</h2>
+  <pre id="output" style="background:#eee; padding:1em;"></pre>
+</body>
+</html>

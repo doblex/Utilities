@@ -1,0 +1,20 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Runtime/UI/DialogueSystem/DialogueStyle.uss?fileID=7433441132597879392&amp;guid=1422ef69d1d3417458b45a72c4286398&amp;type=3#DialogueStyle" />
+    <engine:VisualElement name="Choices" style="flex-grow: 1; align-self: center; flex-direction: column; justify-content: center; width: 30%;" />
+    <engine:VisualElement style="flex-grow: 1; max-height: 50%;">
+        <engine:VisualElement name="TitleArea" style="flex-grow: 0; height: 12%; flex-direction: row; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
+            <engine:VisualElement style="flex-grow: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgba(17, 15, 15, 0.26); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                <engine:Label text="Character Name" name="PersonName" style="-unity-text-align: middle-center; -unity-font-style: bold; font-size: 28px; margin-right: 10px; margin-left: 10px;" />
+            </engine:VisualElement>
+            <engine:VisualElement style="flex-grow: 1;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="TextArea" style="flex-grow: 1; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-left-color: rgba(0, 0, 0, 0.59); border-right-color: rgba(0, 0, 0, 0.59); border-top-color: rgba(0, 0, 0, 0.59); border-bottom-color: rgba(0, 0, 0, 0.59); margin-top: 10px; margin-right: 10px; margin-bottom: 10px; margin-left: 10px; background-color: rgba(0, 0, 0, 0.27); height: 30%;">
+            <engine:ScrollView style="height: 95%;">
+                <engine:Label text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat a mi non commodo. Nam auctor eros mi, eget varius tellus lacinia ut. Fusce condimentum feugiat ante quis lobortis. Fusce congue felis vel elementum aliquam. Nulla facilisi. Duis lobortis eleifend massa ullamcorper maximus. Aenean nibh augue, placerat vel tortor ac, vehicula volutpat tellus. Aenean sed augue in urna hendrerit facilisis. Aenean molestie quis ex at interdum. Etiam diam massa, eleifend nec nulla sed, venenatis porttitor sapien. Vivamus nec tortor ut ante convallis sodales commodo et elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse lobortis lorem at erat pretium tincidunt. Nulla sed massa semper, aliquet ipsum vel, facilisis ipsum. Nulla non viverra purus.&#10;&#10;entum felis, hendrerit pretium augue. In egestas, felis vitae sodales imperdiet, nunc dui vehicula quam, ut lobortis nibh ante id est. Fusce auctor auctor massa ac dictum. Morbi non leo vel velit rhoncus ultricies. Fusce vitae semper nunc. Sed felis libero, volutpat id facilisis in, tempor quis velit. Sed vestibulum eros est. Vestibulum tellus velit, pellentesque ut blandit eu, feugiat nec " name="DialogueText" style="flex-grow: 1; font-size: 30px; white-space: normal; -unity-text-align: middle-left; margin-top: 30px; margin-right: 30px; margin-bottom: 30px; margin-left: 30px;" />
+            </engine:ScrollView>
+            <engine:VisualElement style="flex-grow: 1; align-items: center; align-self: center; width: 100%;">
+                <engine:VisualElement name="DialogueEnd" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-1304905567622442630&amp;guid=81a8e5f1b56fef84ea2766b439cdcdaf&amp;type=3#arrow-down@2x&quot;); width: 5%;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
