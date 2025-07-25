@@ -1,20 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <dialogues>
-<dialogue id="Tutorial">
-	<line>
-		<character>Larion</character>
-		<text>Ciao, questo è un <highlight color="red">Tutorial</highlight>!!!</text>
-		<choices>
-			<choice text="Figooo" next="End_Dialogue"/>
-			<choice text="ok" next="End_Dialogue"/>
-		</choices>
-	</line>
-</dialogue>
-<dialogue id="End_Dialogue">
-	<line>
-		<character>Larion</character>
-		<text>Ci vediamo ciaooooo!!!</text>
-		<next next="next"/>
-	</line>
-</dialogue>
+  <dialogue id="Tutorial" isEnd="false">
+    <line>
+      <character>Larion</character>
+      <text><![CDATA[Ciao, questo è un <highlight color="yellow">Tutorial</highlight>!!!]]></text>
+      <choices>
+        <choice text="Figooo" next="End_Dialogue" />
+        <choice text="ok" next="End_Dialogue" />
+      </choices>
+    </line>
+  </dialogue>
+  <dialogue id="End_Dialogue" isEnd="true">
+    <line>
+      <character>Larion</character>
+      <text>Ci vediamo ciaooooo!!!</text>
+    </line>
+  </dialogue>
 </dialogues>

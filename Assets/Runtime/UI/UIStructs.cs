@@ -12,6 +12,12 @@ namespace utilities.ui
     }
 
     [Serializable]
+    public struct CharacterScript
+    {
+        
+    }
+
+    [Serializable]
     public struct Dialogue
     {
         public string title;

@@ -1,8 +1,8 @@
 {
-    "name": "Runtime",
-    "rootNamespace": "utilities",
+    "name": "Editor",
+    "rootNamespace": "utilities.general",
     "references": [
-        "GUID:f5a87c5af184b06409234a1d8f53a43b"
+        "GUID:d869bc3f7c168264dbcf40ac01cbd23c"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
